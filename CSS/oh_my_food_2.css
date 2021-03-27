@@ -1,0 +1,409 @@
+@charset "UTF-8";
+body {
+  margin: 1em;
+}
+
+header {
+  background-color: white;
+}
+
+header h1 {
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+}
+
+section {
+  background-color: whitesmoke;
+}
+
+section .presentation {
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: 3em;
+}
+
+section .presentation h3 {
+  font-weight: bolder;
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+section .presentation h4 {
+  font-weight: normal;
+  text-align: center;
+}
+
+section .presentation h5 {
+  background-color: #dddddd;
+  height: 2em;
+  align-self: center;
+  text-align: center;
+  padding-top: 1em;
+  box-shadow: 0px 0px 3px black;
+}
+
+section .presentation .explore {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  border-radius: 6em;
+  background: linear-gradient(to bottom right, #e989dd, #ad5edb);
+  box-shadow: 0px 2px 5px black;
+  text-align: center;
+  width: 15em;
+  height: 2em;
+  line-height: 2em;
+  justify-content: center;
+  padding: 0.5em;
+}
+
+section .fonction {
+  background-color: white;
+  padding: 1em;
+  text-align: left;
+}
+
+section .fonction h2 {
+  font-weight: bolder;
+}
+
+section .fonction ol li {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  list-style: none;
+  width: auto;
+  border-radius: 2em;
+  background-color: #f5f5f5;
+  padding: 1.5em;
+  padding-left: 0;
+  margin: 1.5em;
+  text-align: center;
+  box-shadow: 0px 2px 3px #4e4d4d;
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
+}
+
+section .fonction ol li:active {
+  transform: scale(1);
+  background-color: #f5edff;
+  box-shadow: 0px 2px 5px black;
+}
+
+section .fonction ol li .imageflottante {
+  float: left;
+  border: none;
+  font-weight: bold;
+  border-radius: 50%;
+  color: white;
+  background-color: #ab6cb1;
+  background-color: #9356DC;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 1.7em;
+  font-size: 1em;
+}
+
+section .fonction ol li .choice_icons {
+  float: left;
+  padding-left: 1em;
+}
+
+.restaurants {
+  font-weight: bolder;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  justify-content: center;
+  line-height: 1em;
+  background-color: whitesmoke;
+  padding: 1em;
+  text-align: center;
+}
+
+.restaurants h2 {
+  text-align: left;
+  font-weight: bolder;
+}
+
+.restaurants h3 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.restaurants h4 {
+  font-weight: normal;
+}
+
+.restaurants h6 {
+  font-weight: normal;
+}
+
+.restaurants img {
+  border-radius: 1em 1em 0 0;
+  position: relative;
+  width: 100%;
+}
+
+.restaurants .palette {
+  background-color: white;
+  width: auto;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.restaurants .palette .new {
+  color: green;
+  background-color: #99E2D0;
+  position: absolute;
+  width: 5em;
+  top: 30px;
+  right: 20px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.restaurants .note {
+  background-color: white;
+  width: auto;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.restaurants .note .new {
+  color: green;
+  background-color: #99E2D0;
+  position: absolute;
+  width: 5em;
+  top: 30px;
+  right: 20px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.restaurants .lafrançaise {
+  background-color: white;
+  width: auto;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.restaurants .lafrançaise .new {
+  color: green;
+  background-color: #99E2D0;
+  position: absolute;
+  width: 5em;
+  top: 30px;
+  right: 20px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.restaurants .delice {
+  background-color: white;
+  width: auto;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.restaurants .delice .new {
+  color: green;
+  background-color: #99E2D0;
+  position: absolute;
+  width: 5em;
+  top: 30px;
+  right: 20px;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.restaurants .heart {
+  text-align: right;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+
+.restaurants .fas.fa-heart {
+  display: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.restaurants .heart:hover .fas.fa-heart {
+  display: inline;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.restaurants .fa-heart {
+  cursor: pointer;
+  font-size: 30px;
+  background: -webkit-linear-gradient(#e989dd, #ad5edb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+}
+
+.restaurants .heart:hover .far.fa-heart {
+  opacity: 0;
+}
+
+.restau {
+  background-color: #f5f5f5;
+  border-radius: 1em;
+  width: 100%;
+}
+
+.restau .carte {
+  position: absolute;
+  z-index: 2;
+}
+
+.restau .view {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.restau .view img {
+  width: 100%;
+  z-index: 1;
+}
+
+.restau .menu {
+  position: relative;
+  top: -100px;
+  z-index: 5;
+  background-color: #f5f5f5;
+  border-radius: 50px 50px 0 0;
+  padding: 10px;
+}
+
+.restau h1 {
+  font-family: 'Shrikhand', cursive;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 2em 0 2em;
+}
+
+.restau h2 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.restau h2 u {
+  text-decoration: underline green;
+}
+
+.restau article {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0 0 10px;
+  margin: 15px;
+  border-radius: 2em;
+  height: 7em;
+}
+
+.restau article .price {
+  display: flex;
+  font-weight: bold;
+  align-self: center;
+  text-align: right;
+}
+
+.restau article .check {
+  text-align: center;
+  background-color: #99E2D0;
+  width: 0px;
+  overflow: hidden;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  transition: width .5s;
+  font-size: 30px;
+  color: white;
+}
+
+.restau article .check .far .fa-check-circle {
+  vertical-align: bottom;
+  text-align: center;
+}
+
+.restau article:hover > .check {
+  width: 150px;
+  align-self: center;
+  align-self: center;
+}
+
+.restau .price {
+  margin-left: auto;
+  margin-right: 2em;
+}
+
+.check {
+  display: flex;
+  right: 2em;
+  height: 3.75em;
+  vertical-align: middle;
+  align-self: center;
+  border-radius: 0 1em 1em 0;
+  background-color: green;
+  text-align: right;
+  width: 0;
+  overflow: hidden;
+  transition: width .5s;
+}
+
+span {
+  align-self: center;
+}
+
+.order {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #e989dd, #ad5edb);
+  color: white;
+  margin: auto;
+  border-radius: 1em;
+  box-shadow: 0px 2px 5px black;
+  text-align: center;
+  width: 10em;
+  height: 2em;
+  line-height: 2em;
+  justify-content: center;
+  margin-top: 4em;
+}
+
+footer {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  background-color: #3f3f3f;
+  width: auto;
+  color: white;
+  height: auto;
+  text-align: left;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+footer h2 {
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  color: white;
+  font-family: 'Shrikhand', cursive;
+  margin: 0;
+}
+
+footer .icon_footer {
+  color: white;
+}
+
+footer .icon_footer .fas .fa-utensils {
+  color: white;
+}

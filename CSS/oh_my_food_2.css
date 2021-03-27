@@ -223,7 +223,7 @@ section .fonction ol li .choice_icons {
 
 .restaurants .heart {
   text-align: right;
-  padding-right: 1em;
+  padding-right: 2em;
   padding-bottom: 1em;
 }
 
@@ -246,6 +246,10 @@ section .fonction ol li .choice_icons {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
+}
+
+.restaurants .far.fa-heart {
+  color: black;
 }
 
 .restaurants .heart:hover .far.fa-heart {
@@ -328,7 +332,7 @@ section .fonction ol li .choice_icons {
   color: white;
 }
 
-.restau article .check .far .fa-check-circle {
+.restau article .check .fas .fa-check-circle {
   vertical-align: bottom;
   text-align: center;
 }

@@ -317,6 +317,7 @@ section .fonction ol li .choice_icons:hover {
 }
 
 .restau article {
+  font-family: 'Roboto', sans-serif;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -324,6 +325,10 @@ section .fonction ol li .choice_icons:hover {
   margin: 15px;
   border-radius: 2em;
   height: 7em;
+}
+
+.restau article h3 {
+  font-weight: bolder;
 }
 
 .restau article .price {
@@ -349,6 +354,8 @@ section .fonction ol li .choice_icons:hover {
 .restau article .check .fas .fa-check-circle {
   vertical-align: bottom;
   text-align: center;
+  transform: rotate(360deg);
+  transition: transform 1.5s ease-in-out;
 }
 
 .restau article:hover > .check {

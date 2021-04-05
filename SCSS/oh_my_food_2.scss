@@ -333,6 +333,7 @@ section
 		}
 	}
 	article{
+  font-family: 'Roboto', sans-serif;
   background-color: white;
   display:flex;
   justify-content:space-between;
@@ -340,6 +341,10 @@ section
   margin: 15px;
   border-radius: 2em;
   height: 7em;
+  h3 
+  {
+	  font-weight: bolder;
+  }
 	.price{
 		display: flex;
 		font-weight: bold;
@@ -365,6 +370,11 @@ article .check{
 	{
 		vertical-align: bottom;
 	text-align: center;
+	
+		transform: rotate(360deg);
+  transition:transform 1.5s ease-in-out ;
+	
+
 		
 	}
 }
@@ -373,6 +383,8 @@ article:hover > .check{
   width:150px;
   align-self: center;
   align-self: center;
+  
+
 }
 .price
 {margin-left: auto; 

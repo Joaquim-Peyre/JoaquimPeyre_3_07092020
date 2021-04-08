@@ -310,10 +310,163 @@ section .fonction ol li .choice_icons:hover {
 
 .restau h2 {
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 3px;
 }
 
-.restau h2 u {
-  text-decoration: underline green;
+.restau hr {
+  margin: 0;
+  width: 50px;
+  border: 3px solid #99E2D0;
+}
+
+.restau .one {
+  -webkit-animation: fadein 500ms;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .two {
+  -webkit-animation: fadein 1s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .three {
+  -webkit-animation: fadein 1.5s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .four {
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .five {
+  -webkit-animation: fadein 2.5s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .six {
+  -webkit-animation: fadein 3s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .seven {
+  -webkit-animation: fadein 3.5s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .eight {
+  -webkit-animation: fadein 4s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .nine {
+  -webkit-animation: fadein 4.5s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau .ten {
+  -webkit-animation: fadein 5s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .restau article {
@@ -325,20 +478,22 @@ section .fonction ol li .choice_icons:hover {
   margin: 15px;
   border-radius: 2em;
   height: 7em;
+  box-shadow: 0px 1px 1px black;
 }
 
-.restau article h3 {
+.restau h3 {
   font-weight: bolder;
 }
 
-.restau article .price {
-  display: flex;
+.restau .price {
+  position: relative;
+  right: 2em;
   font-weight: bold;
   align-self: center;
   text-align: right;
 }
 
-.restau article .check {
+article .check {
   text-align: center;
   background-color: #99E2D0;
   width: 0px;
@@ -351,20 +506,18 @@ section .fonction ol li .choice_icons:hover {
   color: white;
 }
 
-.restau article .check .fas .fa-check-circle {
-  vertical-align: bottom;
-  text-align: center;
-  transform: rotate(360deg);
-  transition: transform 1.5s ease-in-out;
-}
-
-.restau article:hover > .check {
+article:hover > .check {
   width: 150px;
   align-self: center;
   align-self: center;
 }
 
-.restau .price {
+article:hover > .check .fa-check-circle {
+  transform: rotate(360deg);
+  transition: transform .5s;
+}
+
+.price {
   margin-left: auto;
   margin-right: 2em;
 }
@@ -385,6 +538,11 @@ section .fonction ol li .choice_icons:hover {
 
 span {
   align-self: center;
+}
+
+.fas .fa-check-circle {
+  vertical-align: bottom;
+  text-align: center;
 }
 
 .order {

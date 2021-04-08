@@ -327,11 +327,165 @@ section
 	h2 
 	{
 		font-family: 'Roboto', sans-serif;
-		u 
-		{
-			text-decoration: underline green;
+		margin-bottom: 3px;
+		
+	}
+	hr 
+	{
+		margin: 0;
+		width: 50px;
+		border: 3px solid $tertiaire;
+	
+	}
+	.one{
+		-webkit-animation: fadein 500ms; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
 		}
 	}
+	.two
+	{
+		-webkit-animation: fadein 1s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}
+	.three
+	{
+		-webkit-animation: fadein 1.5s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}
+	.four
+	{
+		-webkit-animation: fadein 2s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}	
+	.five
+	{
+		-webkit-animation: fadein 2.5s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}	
+	.six
+	{
+		-webkit-animation: fadein 3s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}	
+	.seven
+	{
+		-webkit-animation: fadein 3.5s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}	
+	.eight
+	{
+		-webkit-animation: fadein 4s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}	
+	.nine
+	{
+		-webkit-animation: fadein 4.5s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}	
+	.ten 
+	{
+		-webkit-animation: fadein 5s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
+	}	
 	article{
   font-family: 'Roboto', sans-serif;
   background-color: white;
@@ -341,12 +495,20 @@ section
   margin: 15px;
   border-radius: 2em;
   height: 7em;
+  box-shadow: 0px 1px 1px black;
+	
+	
+	
+}
+
+
   h3 
   {
 	  font-weight: bolder;
   }
 	.price{
-		display: flex;
+		position: relative;
+		right: 2em;
 		font-weight: bold;
 		align-self:center;
 		text-align: right;
@@ -366,24 +528,19 @@ article .check{
   transition: width .5s;
   font-size:30px;
   color: white;
-  .fas .fa-check-circle
-	{
-		vertical-align: bottom;
-	text-align: center;
-	
-		transform: rotate(360deg);
-  transition:transform 1.5s ease-in-out ;
-	
-
-		
-	}
+  
+ 
 }
 
 article:hover > .check{
   width:150px;
   align-self: center;
   align-self: center;
-  
+  .fa-check-circle
+ {
+	  transform: rotate(360deg);
+	  transition:transform .5s ;
+ }
 
 }
 .price
@@ -391,7 +548,7 @@ article:hover > .check{
 	margin-right: 2em;
 }
 	
-	}
+
 	  
 	  .check{
 		display:flex;
@@ -405,12 +562,19 @@ article:hover > .check{
 		width:0;
 		overflow:hidden;
 		transition: width .5s; 
+		
 	  }
 	  
 	  span{
 		align-self:center;
 	  }
-	  
+
+		.fas .fa-check-circle
+		{
+			vertical-align: bottom;
+		text-align: center;
+	}
+
 	.order 
 {
 	position: relative;

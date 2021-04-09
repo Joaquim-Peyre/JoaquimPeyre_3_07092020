@@ -9,14 +9,45 @@ $degrade: linear-gradient(to bottom right, #e989dd, #ad5edb);
 body
 {
 	margin: 0em;
+	
 }
 header{
     background-color: white;
-    h1 
+	padding-left: 2em;
+	margin: 0;
+	position: relative;
+	
+    .fas .fa-arrow-left
+		{
+			position: absolute;
+			color: $gray_dark;
+	align-self: center;
+	top: 10px;
+		}
+		h1 
     {
         font-family: 'Shrikhand', cursive;
 	    text-align: center;
+		
     }
+
+	
+	.loader {
+		border: 16px solid #f3f3f3; /* Light grey */
+		border-top: 16px solid $primaire; /* Blue */
+		border-radius: 50%;
+		width: 12px;
+		height: 12px;
+		animation: spin 2s ;
+		animation-duration: 2s;
+		
+	  }
+	  
+	  @keyframes spin {
+		0% { transform: rotate(0deg); }
+		100% { transform: rotate(360deg); 
+		opacity: 0;}
+	  }
 }
 section 
 {
@@ -261,6 +292,18 @@ section
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		opacity: 1;
+		-webkit-animation: fadein 2s; /* Safari et Chrome */
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+		
+		
+		  from {
+			  opacity:0;
+		  }
+		  to {
+			  opacity:1;
+		  }
+		 
+		}
 	  }
 	  
 	  .heart:hover .fas.fa-heart{
@@ -621,5 +664,10 @@ footer
 			{
 				color: white;
 			}
+	}
+	a[href^="mailto"]
+	{
+		color: white;
+		text-decoration: none;
 	}
 }

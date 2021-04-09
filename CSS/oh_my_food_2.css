@@ -5,11 +5,43 @@ body {
 
 header {
   background-color: white;
+  padding-left: 2em;
+  margin: 0;
+  position: relative;
+}
+
+header .fas .fa-arrow-left {
+  position: absolute;
+  color: #353535;
+  align-self: center;
+  top: 10px;
 }
 
 header h1 {
   font-family: 'Shrikhand', cursive;
   text-align: center;
+}
+
+header .loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #9356DC;
+  /* Blue */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  animation: spin 2s;
+  animation-duration: 2s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
 }
 
 section {
@@ -249,6 +281,18 @@ section .fonction ol li .choice_icons:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .restaurants .heart:hover .fas.fa-heart {
@@ -589,4 +633,9 @@ footer .icon_footer {
 
 footer .icon_footer .fas .fa-utensils {
   color: white;
+}
+
+footer a[href^="mailto"] {
+  color: white;
+  text-decoration: none;
 }

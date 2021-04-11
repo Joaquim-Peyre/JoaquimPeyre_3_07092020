@@ -10,9 +10,10 @@ header {
   position: relative;
 }
 
-header .fas .fa-arrow-left {
+header .fa-arrow-left {
   position: absolute;
-  color: #353535;
+  top: 5em;
+  color: black;
   align-self: center;
   top: 10px;
 }
@@ -20,6 +21,7 @@ header .fas .fa-arrow-left {
 header h1 {
   font-family: 'Shrikhand', cursive;
   text-align: center;
+  justify-content: space-between;
 }
 
 header .loader {
@@ -116,6 +118,7 @@ section .fonction ol li {
   transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
+  cursor: pointer;
 }
 
 section .fonction ol li:hover {
@@ -150,6 +153,7 @@ section .fonction ol li .choice_icons {
   color: #7e7e7e;
   transition-property: transform;
   transition-duration: 400ms;
+  cursor: pointer;
 }
 
 section .fonction ol li .choice_icons:hover {
@@ -352,6 +356,47 @@ section .fonction ol li .choice_icons:hover {
   margin: 1em 2em 0 2em;
 }
 
+.restau h1 .fas.fa-heart {
+  display: none;
+  cursor: pointer;
+  opacity: 1;
+  background: -webkit-linear-gradient(#e989dd, #ad5edb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.restau h1 .coeur:hover .fas.fa-heart {
+  display: inline;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.restau h1 .fa-heart {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.restau h1 .far.fa-heart {
+  color: black;
+}
+
+.restau h1 .coeur:hover .far.fa-heart {
+  opacity: 0;
+}
+
 .restau h2 {
   font-family: 'Roboto', sans-serif;
   margin-bottom: 3px;
@@ -548,6 +593,7 @@ article .check {
   transition: width .5s;
   font-size: 30px;
   color: white;
+  cursor: pointer;
 }
 
 article:hover > .check {

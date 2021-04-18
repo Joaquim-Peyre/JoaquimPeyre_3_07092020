@@ -10,33 +10,6 @@ $degrade: linear-gradient(to bottom right, #e989dd, #ad5edb);
 body
 {	
 	margin: 0;
-	.container
-	{
-		
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		animation: normal;
-	.loader
-	{
-		z-index: 99;
-		position: fixed;
-		background-color: red;
-		border-top: 16px solid $primaire;
-		border-bottom: 16px solid $tertiaire;
-		border-radius: 50%;
-		width: 100%;
-		height: 100%;
-		animation: spin  forwards  ;
-		animation-duration: 1.5s ;
-			@keyframes spin 
-			{
-				0% { transform: rotate(0deg); }
-				100% { transform: rotate(360deg); 
-					opacity: 0;
-			}
-		
-		}	
 }
 header
 	{
@@ -718,7 +691,6 @@ footer
 		text-decoration: none;
 		}
 	}
-	}
-}
+
 
 	

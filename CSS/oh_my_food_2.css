@@ -1,39 +1,26 @@
 @charset "UTF-8";
 body {
-  margin: 0em;
-}
-
-header {
-  background-color: white;
-  padding-left: 2em;
   margin: 0;
-  position: relative;
 }
 
-header .fa-arrow-left {
-  position: absolute;
-  top: 5em;
-  color: black;
-  align-self: center;
-  top: 10px;
+body .container {
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  animation: normal;
 }
 
-header h1 {
-  font-family: 'Shrikhand', cursive;
-  text-align: center;
-  justify-content: space-between;
-}
-
-header .loader {
-  border: 16px solid #f3f3f3;
-  /* Light grey */
+body .container .loader {
+  z-index: 99;
+  position: fixed;
+  background-color: red;
   border-top: 16px solid #9356DC;
-  /* Blue */
+  border-bottom: 16px solid #99E2D0;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
-  animation: spin 2s;
-  animation-duration: 2s;
+  width: 100%;
+  height: 100%;
+  animation: spin  forwards;
+  animation-duration: 1.5s;
 }
 
 @keyframes spin {
@@ -46,27 +33,53 @@ header .loader {
   }
 }
 
-section {
+body .container header {
+  background-color: white;
+  padding-left: 2em;
+  margin: 0;
+  position: relative;
+}
+
+body .container header .fa-arrow-left {
+  position: absolute;
+  top: 5em;
+  color: black;
+  align-self: center;
+  top: 10px;
+}
+
+body .container header h1 {
+  z-index: 1;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  justify-content: space-between;
+}
+
+body .container section {
   background-color: whitesmoke;
 }
 
-section .presentation {
+body .container section .presentation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   font-family: 'Roboto', sans-serif;
   padding-bottom: 3em;
+  justify-content: center;
 }
 
-section .presentation h3 {
+body .container section .presentation h3 {
   font-weight: bolder;
   padding-top: 0.5em;
   text-align: center;
 }
 
-section .presentation h4 {
+body .container section .presentation h4 {
   font-weight: normal;
   text-align: center;
 }
 
-section .presentation h5 {
+body .container section .presentation h5 {
   background-color: #dddddd;
   height: 2em;
   align-self: center;
@@ -75,34 +88,40 @@ section .presentation h5 {
   box-shadow: 0px 0px 3px black;
 }
 
-section .presentation .explore {
+body .container section .presentation button {
+  border-style: none;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: white;
   margin: auto;
   border-radius: 6em;
   background: linear-gradient(to bottom right, #e989dd, #ad5edb);
-  box-shadow: 0px 2px 5px black;
-  text-align: center;
+  box-shadow: 0px 1px 2px black;
   width: 15em;
-  height: 2em;
+  height: 4em;
   line-height: 2em;
-  justify-content: center;
   padding: 0.5em;
+  cursor: pointer;
 }
 
-section .fonction {
+body .container section .presentation button button:hover {
+  background-color: linear-gradient(to bottom right, #c89fc3, #a77bbe);
+  box-shadow: 0px 2px 3px black;
+}
+
+body .container section .fonction {
   background-color: white;
   padding: 1em;
   text-align: left;
 }
 
-section .fonction h2 {
+body .container section .fonction h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
 
-section .fonction ol li {
+body .container section .fonction ol li {
+  cursor: pointer;
   position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
@@ -118,16 +137,15 @@ section .fonction ol li {
   transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
-  cursor: pointer;
 }
 
-section .fonction ol li:hover {
+body .container section .fonction ol li:hover {
   transform: scale(1);
   background-color: #f5edff;
   box-shadow: 0px 2px 5px black;
 }
 
-section .fonction ol li .imageflottante {
+body .container section .fonction ol li .imageflottante {
   position: absolute;
   left: -1em;
   top: 20px;
@@ -145,7 +163,7 @@ section .fonction ol li .imageflottante {
   font-size: 1em;
 }
 
-section .fonction ol li .choice_icons {
+body .container section .fonction ol li .choice_icons {
   float: left;
   padding-left: 1em;
   font-size: 2em;
@@ -156,11 +174,11 @@ section .fonction ol li .choice_icons {
   cursor: pointer;
 }
 
-section .fonction ol li .choice_icons:hover {
+body .container section .fonction ol li .choice_icons:hover {
   color: #9356dc;
 }
 
-.restaurants {
+body .container .restaurants {
   font-weight: bolder;
   position: relative;
   font-family: 'Roboto', sans-serif;
@@ -171,31 +189,31 @@ section .fonction ol li .choice_icons:hover {
   text-align: center;
 }
 
-.restaurants h2 {
+body .container .restaurants h2 {
   text-align: left;
   font-weight: bolder;
 }
 
-.restaurants h3 {
+body .container .restaurants h3 {
   text-align: center;
   font-weight: bold;
 }
 
-.restaurants h4 {
+body .container .restaurants h4 {
   font-weight: normal;
 }
 
-.restaurants h6 {
+body .container .restaurants h6 {
   font-weight: normal;
 }
 
-.restaurants img {
+body .container .restaurants img {
   border-radius: 1em 1em 0 0;
   position: relative;
   width: 100%;
 }
 
-.restaurants .palette {
+body .container .restaurants .palette {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -203,7 +221,7 @@ section .fonction ol li .choice_icons:hover {
   position: relative;
 }
 
-.restaurants .palette .new {
+body .container .restaurants .palette .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -214,7 +232,7 @@ section .fonction ol li .choice_icons:hover {
   padding-bottom: 0.25em;
 }
 
-.restaurants .note {
+body .container .restaurants .note {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -222,7 +240,7 @@ section .fonction ol li .choice_icons:hover {
   position: relative;
 }
 
-.restaurants .note .new {
+body .container .restaurants .note .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -233,7 +251,7 @@ section .fonction ol li .choice_icons:hover {
   padding-bottom: 0.25em;
 }
 
-.restaurants .lafrançaise {
+body .container .restaurants .lafrançaise {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -241,7 +259,7 @@ section .fonction ol li .choice_icons:hover {
   position: relative;
 }
 
-.restaurants .lafrançaise .new {
+body .container .restaurants .lafrançaise .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -252,7 +270,7 @@ section .fonction ol li .choice_icons:hover {
   padding-bottom: 0.25em;
 }
 
-.restaurants .delice {
+body .container .restaurants .delice {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -260,7 +278,7 @@ section .fonction ol li .choice_icons:hover {
   position: relative;
 }
 
-.restaurants .delice .new {
+body .container .restaurants .delice .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -271,13 +289,13 @@ section .fonction ol li .choice_icons:hover {
   padding-bottom: 0.25em;
 }
 
-.restaurants .heart {
+body .container .restaurants .heart {
   text-align: right;
   padding-right: 4em;
   padding-bottom: 1em;
 }
 
-.restaurants .fas.fa-heart {
+body .container .restaurants .fas.fa-heart {
   display: none;
   cursor: pointer;
   opacity: 1;
@@ -299,64 +317,55 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restaurants .heart:hover .fas.fa-heart {
+body .container .restaurants .heart:hover .fas.fa-heart {
   display: inline;
   cursor: pointer;
   opacity: 1;
 }
 
-.restaurants .fa-heart {
+body .container .restaurants .fa-heart {
   cursor: pointer;
   font-size: 30px;
 }
 
-.restaurants .far.fa-heart {
+body .container .restaurants .far.fa-heart {
   color: black;
 }
 
-.restaurants .heart:hover .far.fa-heart {
+body .container .restaurants .heart:hover .far.fa-heart {
   opacity: 0;
 }
 
-.restau {
+body .container .restau {
   background-color: #f5f5f5;
   border-radius: 1em;
   width: 100%;
 }
 
-.restau .carte {
+body .container .restau .carte {
   position: absolute;
   z-index: 2;
 }
 
-.restau .view {
+body .container .restau .view {
   position: relative;
   width: 100%;
   z-index: 1;
 }
 
-.restau .view img {
+body .container .restau .view img {
   width: 100%;
   z-index: 1;
 }
 
-.restau .menu {
-  position: relative;
-  top: -100px;
-  z-index: 5;
-  background-color: #f5f5f5;
-  border-radius: 50px 50px 0 0;
-  padding: 10px;
-}
-
-.restau h1 {
+body .container .restau h1 {
   font-family: 'Shrikhand', cursive;
   display: flex;
   justify-content: space-between;
   margin: 1em 2em 0 2em;
 }
 
-.restau h1 .fas.fa-heart {
+body .container .restau h1 .fas.fa-heart {
   display: none;
   cursor: pointer;
   opacity: 1;
@@ -378,37 +387,38 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau h1 .coeur:hover .fas.fa-heart {
+body .container .restau h1 .coeur:hover .fas.fa-heart {
   display: inline;
   cursor: pointer;
   opacity: 1;
 }
 
-.restau h1 .fa-heart {
+body .container .restau h1 .fa-heart {
   cursor: pointer;
   font-size: 30px;
 }
 
-.restau h1 .far.fa-heart {
+body .container .restau h1 .far.fa-heart {
   color: black;
 }
 
-.restau h1 .coeur:hover .far.fa-heart {
+body .container .restau h1 .coeur:hover .far.fa-heart {
   opacity: 0;
 }
 
-.restau h2 {
+body .container .restau h2 {
   font-family: 'Roboto', sans-serif;
   margin-bottom: 3px;
+  text-align: left;
 }
 
-.restau hr {
+body .container .restau hr {
   margin: 0;
   width: 50px;
   border: 3px solid #99E2D0;
 }
 
-.restau .one {
+body .container .restau .one {
   -webkit-animation: fadein 500ms;
   /* Safari et Chrome */
 }
@@ -423,7 +433,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .two {
+body .container .restau .two {
   -webkit-animation: fadein 1s;
   /* Safari et Chrome */
 }
@@ -438,7 +448,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .three {
+body .container .restau .three {
   -webkit-animation: fadein 1.5s;
   /* Safari et Chrome */
 }
@@ -453,7 +463,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .four {
+body .container .restau .four {
   -webkit-animation: fadein 2s;
   /* Safari et Chrome */
 }
@@ -468,7 +478,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .five {
+body .container .restau .five {
   -webkit-animation: fadein 2.5s;
   /* Safari et Chrome */
 }
@@ -483,7 +493,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .six {
+body .container .restau .six {
   -webkit-animation: fadein 3s;
   /* Safari et Chrome */
 }
@@ -498,7 +508,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .seven {
+body .container .restau .seven {
   -webkit-animation: fadein 3.5s;
   /* Safari et Chrome */
 }
@@ -513,7 +523,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .eight {
+body .container .restau .eight {
   -webkit-animation: fadein 4s;
   /* Safari et Chrome */
 }
@@ -528,7 +538,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .nine {
+body .container .restau .nine {
   -webkit-animation: fadein 4.5s;
   /* Safari et Chrome */
 }
@@ -543,7 +553,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau .ten {
+body .container .restau .ten {
   -webkit-animation: fadein 5s;
   /* Safari et Chrome */
 }
@@ -558,7 +568,7 @@ section .fonction ol li .choice_icons:hover {
   }
 }
 
-.restau article {
+body .container .restau article {
   font-family: 'Roboto', sans-serif;
   background-color: white;
   display: flex;
@@ -570,11 +580,16 @@ section .fonction ol li .choice_icons:hover {
   box-shadow: 0px 1px 1px black;
 }
 
-.restau h3 {
+body .container .restau h3 {
   font-weight: bolder;
+  text-align: left;
 }
 
-.restau .price {
+body .container .restau p {
+  text-align: left;
+}
+
+body .container .restau .price {
   position: relative;
   right: 2em;
   font-weight: bold;
@@ -582,7 +597,7 @@ section .fonction ol li .choice_icons:hover {
   text-align: right;
 }
 
-article .check {
+body .container article .check {
   text-align: center;
   background-color: #99E2D0;
   width: 0px;
@@ -596,23 +611,23 @@ article .check {
   cursor: pointer;
 }
 
-article:hover > .check {
+body .container article:hover > .check {
   width: 150px;
   align-self: center;
   align-self: center;
 }
 
-article:hover > .check .fa-check-circle {
+body .container article:hover > .check .fa-check-circle {
   transform: rotate(360deg);
   transition: transform .5s;
 }
 
-.price {
+body .container .price {
   margin-left: auto;
   margin-right: 2em;
 }
 
-.check {
+body .container .check {
   display: flex;
   right: 2em;
   height: 3.75em;
@@ -626,32 +641,48 @@ article:hover > .check .fa-check-circle {
   transition: width .5s;
 }
 
-span {
+body .container span {
   align-self: center;
 }
 
-.fas .fa-check-circle {
+body .container .fas .fa-check-circle {
   vertical-align: bottom;
   text-align: center;
 }
 
-.order {
-  position: relative;
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to bottom right, #e989dd, #ad5edb);
-  color: white;
-  margin: auto;
-  border-radius: 1em;
-  box-shadow: 0px 2px 5px black;
+body .container .menu {
   text-align: center;
-  width: 10em;
-  height: 2em;
-  line-height: 2em;
-  justify-content: center;
-  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  top: -100px;
+  z-index: 5;
+  background-color: #f5f5f5;
+  border-radius: 50px 50px 0 0;
+  padding: 10px;
 }
 
-footer {
+body .container .menu button {
+  border-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: white;
+  margin: auto;
+  border-radius: 6em;
+  background: linear-gradient(to bottom right, #e989dd, #ad5edb);
+  box-shadow: 0px 1px 2px black;
+  width: 15em;
+  height: 4em;
+  line-height: 2em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+body .container .menu button button:hover {
+  background-color: linear-gradient(to bottom right, #c89fc3, #a77bbe);
+  box-shadow: 0px 2px 3px black;
+}
+
+body .container footer {
   position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
@@ -665,7 +696,7 @@ footer {
   padding-top: 1em;
 }
 
-footer h2 {
+body .container footer h2 {
   font-weight: lighter;
   letter-spacing: 0.1em;
   color: white;
@@ -673,15 +704,15 @@ footer h2 {
   margin: 0;
 }
 
-footer .icon_footer {
+body .container footer .icon_footer {
   color: white;
 }
 
-footer .icon_footer .fas .fa-utensils {
+body .container footer .icon_footer .fas .fa-utensils {
   color: white;
 }
 
-footer a[href^="mailto"] {
+body .container footer a[href^="mailto"] {
   color: white;
   text-decoration: none;
 }

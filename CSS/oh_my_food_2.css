@@ -48,14 +48,55 @@ body .loader {
   }
 }
 
-body header {
+body .fas.fa-heart {
+  display: none;
+  cursor: pointer;
+  opacity: 1;
+  background: -webkit-linear-gradient(#e989dd, #ad5edb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 1;
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+}
+
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body .heart:hover .fas.fa-heart {
+  display: inline;
+  cursor: pointer;
+  opacity: 1;
+}
+
+body .fa-heart {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+body .far.fa-heart {
+  color: black;
+}
+
+body .heart:hover .far.fa-heart {
+  opacity: 0;
+}
+
+header {
   background-color: white;
   padding-left: 2em;
   margin: 0;
   position: relative;
 }
 
-body header .fa-arrow-left {
+header .fa-arrow-left {
   position: absolute;
   top: 5em;
   color: black;
@@ -63,18 +104,18 @@ body header .fa-arrow-left {
   top: 10px;
 }
 
-body header h1 {
+header h1 {
   z-index: 1;
   font-family: 'Shrikhand', cursive;
   text-align: center;
   justify-content: space-between;
 }
 
-body section {
+section {
   background-color: whitesmoke;
 }
 
-body section .presentation {
+section .presentation {
   flex-direction: column;
   text-align: center;
   display: flex;
@@ -83,18 +124,18 @@ body section .presentation {
   justify-content: center;
 }
 
-body section .presentation h3 {
+section .presentation h3 {
   font-weight: bolder;
   padding-top: 0.5em;
   text-align: center;
 }
 
-body section .presentation h4 {
+section .presentation h4 {
   font-weight: normal;
   text-align: center;
 }
 
-body section .presentation h5 {
+section .presentation h5 {
   background-color: #dddddd;
   height: 2em;
   align-self: center;
@@ -104,19 +145,19 @@ body section .presentation h5 {
   width: 100%;
 }
 
-body section .fonction {
+section .fonction {
   z-index: 10;
   background-color: white;
   padding: 1em;
   text-align: left;
 }
 
-body section .fonction h2 {
+section .fonction h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
 }
 
-body section .fonction ol li {
+section .fonction ol li {
   cursor: pointer;
   position: relative;
   font-family: 'Roboto', sans-serif;
@@ -135,13 +176,13 @@ body section .fonction ol li {
   transition-duration: 400ms;
 }
 
-body section .fonction ol li:hover {
+section .fonction ol li:hover {
   transform: scale(1);
   background-color: #f5edff;
   box-shadow: 0px 2px 5px black;
 }
 
-body section .fonction ol li .imageflottante {
+section .fonction ol li .imageflottante {
   position: absolute;
   left: -1em;
   top: 20px;
@@ -159,7 +200,7 @@ body section .fonction ol li .imageflottante {
   font-size: 1em;
 }
 
-body section .fonction ol li .choice_icons {
+section .fonction ol li .choice_icons {
   float: left;
   padding-left: 1em;
   font-size: 2em;
@@ -170,11 +211,11 @@ body section .fonction ol li .choice_icons {
   cursor: pointer;
 }
 
-body section .fonction ol li .choice_icons:hover {
+section .fonction ol li .choice_icons:hover {
   color: #9356dc;
 }
 
-body .restaurants {
+.restaurants {
   font-weight: bolder;
   position: relative;
   font-family: 'Roboto', sans-serif;
@@ -185,31 +226,31 @@ body .restaurants {
   text-align: center;
 }
 
-body .restaurants h2 {
+.restaurants h2 {
   text-align: left;
   font-weight: bolder;
 }
 
-body .restaurants h3 {
+.restaurants h3 {
   text-align: center;
   font-weight: bold;
 }
 
-body .restaurants h4 {
+.restaurants h4 {
   font-weight: normal;
 }
 
-body .restaurants h6 {
+.restaurants h6 {
   font-weight: normal;
 }
 
-body .restaurants img {
+.restaurants img {
   border-radius: 1em 1em 0 0;
   position: relative;
   width: 100%;
 }
 
-body .restaurants .palette {
+.restaurants .palette {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -217,7 +258,7 @@ body .restaurants .palette {
   position: relative;
 }
 
-body .restaurants .palette .new {
+.restaurants .palette .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -228,7 +269,7 @@ body .restaurants .palette .new {
   padding-bottom: 0.25em;
 }
 
-body .restaurants .note {
+.restaurants .note {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -236,7 +277,7 @@ body .restaurants .note {
   position: relative;
 }
 
-body .restaurants .note .new {
+.restaurants .note .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -247,7 +288,7 @@ body .restaurants .note .new {
   padding-bottom: 0.25em;
 }
 
-body .restaurants .lafrançaise {
+.restaurants .lafrançaise {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -255,7 +296,7 @@ body .restaurants .lafrançaise {
   position: relative;
 }
 
-body .restaurants .lafrançaise .new {
+.restaurants .lafrançaise .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -266,7 +307,7 @@ body .restaurants .lafrançaise .new {
   padding-bottom: 0.25em;
 }
 
-body .restaurants .delice {
+.restaurants .delice {
   background-color: white;
   width: auto;
   border-radius: 1em;
@@ -274,7 +315,7 @@ body .restaurants .delice {
   position: relative;
 }
 
-body .restaurants .delice .new {
+.restaurants .delice .new {
   color: green;
   background-color: #99E2D0;
   position: absolute;
@@ -285,136 +326,54 @@ body .restaurants .delice .new {
   padding-bottom: 0.25em;
 }
 
-body .restaurants .heart {
+.restaurants .heart {
   text-align: right;
   margin-right: 4em;
   padding-bottom: 1em;
 }
 
-body .restaurants .fas.fa-heart {
-  display: none;
-  cursor: pointer;
-  opacity: 1;
-  background: -webkit-linear-gradient(#e989dd, #ad5edb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-  -webkit-animation: fadein 2s;
-  /* Safari et Chrome */
-}
-
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-body .restaurants .heart:hover .fas.fa-heart {
-  display: inline;
-  cursor: pointer;
-  opacity: 1;
-}
-
-body .restaurants .fa-heart {
-  cursor: pointer;
-  font-size: 30px;
-}
-
-body .restaurants .far.fa-heart {
-  color: black;
-}
-
-body .restaurants .heart:hover .far.fa-heart {
-  opacity: 0;
-}
-
-body .restau {
+.restau {
   background-color: #f5f5f5;
   border-radius: 1em;
   width: 100%;
 }
 
-body .restau .carte {
+.restau .carte {
   position: absolute;
   z-index: 2;
 }
 
-body .restau .view {
+.restau .view {
   position: relative;
   width: 100%;
   z-index: 1;
 }
 
-body .restau .view img {
+.restau .view img {
   width: 100%;
   z-index: 1;
 }
 
-body .restau h1 {
+.restau h1 {
   font-family: 'Shrikhand', cursive;
   display: flex;
   justify-content: space-between;
   margin: 1em 2em 0 2em;
 }
 
-body .restau h1 .fas.fa-heart {
-  display: none;
-  cursor: pointer;
-  opacity: 1;
-  background: -webkit-linear-gradient(#e989dd, #ad5edb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  opacity: 1;
-  -webkit-animation: fadein 2s;
-  /* Safari et Chrome */
-}
-
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-body .restau h1 .coeur:hover .fas.fa-heart {
-  display: inline;
-  cursor: pointer;
-  opacity: 1;
-}
-
-body .restau h1 .fa-heart {
-  cursor: pointer;
-  font-size: 30px;
-}
-
-body .restau h1 .far.fa-heart {
-  color: black;
-}
-
-body .restau h1 .coeur:hover .far.fa-heart {
-  opacity: 0;
-}
-
-body .restau h2 {
+.restau h2 {
   font-family: 'Roboto', sans-serif;
   margin-bottom: 3px;
   text-align: left;
 }
 
-body .restau hr {
+.restau hr {
   margin: 0;
   width: 50px;
   border: 3px solid #99E2D0;
 }
 
-body .restau .one {
+.restau .one {
   -webkit-animation: fadein 500ms;
   /* Safari et Chrome */
 }
@@ -429,7 +388,7 @@ body .restau .one {
   }
 }
 
-body .restau .two {
+.restau .two {
   -webkit-animation: fadein 1s;
   /* Safari et Chrome */
 }
@@ -444,7 +403,7 @@ body .restau .two {
   }
 }
 
-body .restau .three {
+.restau .three {
   -webkit-animation: fadein 1.5s;
   /* Safari et Chrome */
 }
@@ -459,7 +418,7 @@ body .restau .three {
   }
 }
 
-body .restau .four {
+.restau .four {
   -webkit-animation: fadein 2s;
   /* Safari et Chrome */
 }
@@ -474,7 +433,7 @@ body .restau .four {
   }
 }
 
-body .restau .five {
+.restau .five {
   -webkit-animation: fadein 2.5s;
   /* Safari et Chrome */
 }
@@ -489,7 +448,7 @@ body .restau .five {
   }
 }
 
-body .restau .six {
+.restau .six {
   -webkit-animation: fadein 3s;
   /* Safari et Chrome */
 }
@@ -504,7 +463,7 @@ body .restau .six {
   }
 }
 
-body .restau .seven {
+.restau .seven {
   -webkit-animation: fadein 3.5s;
   /* Safari et Chrome */
 }
@@ -519,7 +478,7 @@ body .restau .seven {
   }
 }
 
-body .restau .eight {
+.restau .eight {
   -webkit-animation: fadein 4s;
   /* Safari et Chrome */
 }
@@ -534,7 +493,7 @@ body .restau .eight {
   }
 }
 
-body .restau .nine {
+.restau .nine {
   -webkit-animation: fadein 4.5s;
   /* Safari et Chrome */
 }
@@ -549,7 +508,7 @@ body .restau .nine {
   }
 }
 
-body .restau .ten {
+.restau .ten {
   -webkit-animation: fadein 5s;
   /* Safari et Chrome */
 }
@@ -564,7 +523,7 @@ body .restau .ten {
   }
 }
 
-body .restau article {
+.restau article {
   font-family: 'Roboto', sans-serif;
   background-color: white;
   display: flex;
@@ -576,16 +535,16 @@ body .restau article {
   box-shadow: 0px 1px 1px black;
 }
 
-body .restau h3 {
+.restau h3 {
   font-weight: bolder;
   text-align: left;
 }
 
-body .restau p {
+.restau p {
   text-align: left;
 }
 
-body .restau .price {
+.restau .price {
   position: relative;
   right: 2em;
   font-weight: bold;
@@ -593,7 +552,7 @@ body .restau .price {
   text-align: right;
 }
 
-body article .check {
+article .check {
   text-align: center;
   background-color: #99E2D0;
   width: 0px;
@@ -607,23 +566,23 @@ body article .check {
   cursor: pointer;
 }
 
-body article:hover > .check {
+article:hover > .check {
   width: 150px;
   align-self: center;
   align-self: center;
 }
 
-body article:hover > .check .fa-check-circle {
+article:hover > .check .fa-check-circle {
   transform: rotate(360deg);
   transition: transform .5s;
 }
 
-body .price {
+.price {
   margin-left: auto;
   margin-right: 2em;
 }
 
-body .check {
+.check {
   display: flex;
   right: 2em;
   height: 3.75em;
@@ -637,16 +596,16 @@ body .check {
   transition: width .5s;
 }
 
-body span {
+span {
   align-self: center;
 }
 
-body .fas .fa-check-circle {
+.fas .fa-check-circle {
   vertical-align: bottom;
   text-align: center;
 }
 
-body .menu {
+.menu {
   flex-direction: column;
   text-align: center;
   display: flex;
@@ -657,7 +616,7 @@ body .menu {
   padding: 10px;
 }
 
-body footer {
+footer {
   position: relative;
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
@@ -671,7 +630,7 @@ body footer {
   padding-top: 1em;
 }
 
-body footer h2 {
+footer h2 {
   font-weight: lighter;
   letter-spacing: 0.1em;
   color: white;
@@ -679,15 +638,15 @@ body footer h2 {
   margin: 0;
 }
 
-body footer .icon_footer {
+footer .icon_footer {
   color: white;
 }
 
-body footer .icon_footer .fas .fa-utensils {
+footer .icon_footer .fas .fa-utensils {
   color: white;
 }
 
-body footer a[href^="mailto"] {
+footer a {
   color: white;
   text-decoration: none;
 }

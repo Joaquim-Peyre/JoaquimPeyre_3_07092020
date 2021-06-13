@@ -10,11 +10,12 @@ $degrade: linear-gradient(to bottom right, #e989dd, #ad5edb);
 body
 {	
 	margin: 0;
+	font-family: 'Roboto', sans-serif;
 	button
 	{
 		z-index: 10;
 		border-style:none;
-		font-family: 'Roboto', sans-serif;
+		
 		font-weight: bold;
 		color: white;
 		margin: auto;
@@ -118,13 +119,17 @@ body
 	section 
 	{
     	background-color: whitesmoke;
-	
+		h2 
+		{
+			text-align: center;
+			font-weight: bolder;
+		}
     	.presentation
     	{
 			flex-direction: column;
 			text-align: center;
 			display: flex;
-			font-family: 'Roboto', sans-serif;
+			
 			padding-bottom: 3em;
 			justify-content: center;
 			h3 
@@ -157,14 +162,14 @@ body
 		text-align: left;
 		h2 
 		{
-			font-family: 'Roboto', sans-serif;   
+			   
 			font-weight:bold;
 		}
 		ol li 
     	{
 			cursor: pointer;
 		    position: relative;
-			font-family: 'Roboto', sans-serif;
+			
 			font-weight: bold;
 			list-style: none;
 			width: auto;
@@ -220,21 +225,18 @@ body
 	}
 	}
 	}
+	
 .restaurants
 {
 	font-weight: bolder;
 	position: relative;
-	font-family: 'Roboto', sans-serif;
-	justify-content: center;
+	
+	justify-content: space-around;
 	line-height: 1em;
 	background-color: whitesmoke;
 	padding: 1em;
 	text-align: center;
-	h2 
-	{
-		text-align: left;
-		font-weight: bolder;
-	}
+	
 	h3 
 	{
 		text-align: center;
@@ -261,6 +263,8 @@ body
 		border-radius: 1em;
 		margin-bottom: 2em;
 		position: relative;
+		margin-right: 10px;
+		margin-left: 10px;
 		.new
 		{
 			color: green;
@@ -280,6 +284,8 @@ body
 		border-radius: 1em;
 		margin-bottom: 2em;
 		position: relative;
+		margin-right: 10px;
+		margin-left: 10px;
 		.new
 		{
 			color: green;
@@ -299,6 +305,8 @@ body
 	border-radius:  1em;
 	margin-bottom: 2em;
 	position: relative;
+	margin-right: 10px;
+		margin-left: 10px;
 		.new
 		{
 			color: green;
@@ -318,6 +326,8 @@ body
 	border-radius:  1em;
 	margin-bottom: 2em;
 	position: relative;
+	margin-right: 10px;
+		margin-left: 10px;
 		.new
 		{
 			color: green;
@@ -341,7 +351,8 @@ body
 {
 	background-color: $whitish;
 	border-radius: 1em;
-	width: 100%;
+	max-width: 100%;
+	line-height:1.5em ;
 	.carte
 	{
 		position: absolute;
@@ -357,6 +368,7 @@ body
 		width: 100%;
 		z-index: 1;
 	}
+	
 }
 h1 
 {
@@ -368,7 +380,7 @@ h1
 }
 h2 
 {
-	font-family: 'Roboto', sans-serif;
+	
 	margin-bottom: 3px;
 	text-align: left;
 }
@@ -377,6 +389,8 @@ hr
 	margin: 0;
 	width: 50px;
 	border: 3px solid $tertiaire;
+		
+	
 }
 .one{
 	-webkit-animation: fadein 500ms; /* Safari et Chrome */
@@ -500,7 +514,7 @@ hr
 }	
 article
 {
-	font-family: 'Roboto', sans-serif;
+	
 	background-color: white;
 	display:flex;
 	justify-content:space-between;
@@ -510,19 +524,34 @@ article
 	height: 7em;
 	box-shadow: 0px 1px 1px black;
 }
+.dish
+{
+	white-space: nowrap; 
+	max-width: 250px; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 h3 
 {
 	font-weight: bolder;
 	text-align: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	width: 250px;
 }
 p 
 {
 	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 250px;
 }
 .price
 {
 	position: relative;
-	right: 2em;
+	right: 1px;
 	font-weight: bold;
 	align-self:center;
 	text-align: right;
@@ -556,7 +585,8 @@ article:hover > .check
 .price
 {
 	margin-left: auto; 
-	margin-right: 2em;
+	margin-right: 1em;
+	font-weight: bold;
 }
 .check
 {
@@ -595,7 +625,7 @@ span
 footer
 {
 	position: relative;
-	font-family: 'Roboto', sans-serif;
+	
 	font-weight: normal;
 	background-color: rgb(63, 63, 63);
 	width: auto;
@@ -625,5 +655,92 @@ footer
 	{
 		color: white;
 		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: 1024px)
+{
+    
+	body 
+		{ 
+	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  	display: flex;
+	  height: 100%;
+	  width: 100%;
+		}
+	header
+	{
+		
+		flex-direction: row;
+		align-items: center;
+		margin:auto;
+	}
+	section 
+	{
+		width: 100%;
+	}	
+	h2 
+		{
+			display: block;
+		}
+	.restaurants
+	    {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		vertical-align: middle;
+		justify-content: space-between;
+	    }
+	.restau 
+    	{
+        background-color: $whitish;
+        border-radius: 1em;
+        width: 100%;
+        .meal 
+			{
+			display: flex;
+			flex-direction: row;
+			vertical-align: middle;
+			justify-content: space-between;
+			width: 100%;
+			}
+		.view
+        {
+            max-width: 50%;
+			vertical-align: middle;
+	}
+        img 
+        {
+			margin-left: 50%;
+			margin-right: 50%;
+			text-align: center;
+		}
+		.dish
+	    {
+		 white-space: nowrap; 
+        width: 500px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+	    }
+
+        article:hover > .check
+		{
+		width:50px;
+		align-self: center;
+		align-self: center;
+		.fa-check-circle
+			{
+			transform: rotate(360deg);
+			transition:transform .5s ;
+			}
+		}
+    }
+	footer
+	{
+    text-align: center;
+	width: 100%;
+	padding: 0;
 	}
 }

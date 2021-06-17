@@ -585,7 +585,7 @@ article .check {
 }
 
 article:hover > .check {
-  width: 150px;
+  width: 100px;
   align-self: center;
   align-self: center;
 }
@@ -625,6 +625,7 @@ span {
 }
 
 .menu {
+  position: relative;
   flex-direction: column;
   text-align: center;
   display: flex;
@@ -679,9 +680,14 @@ footer a {
     width: 100%;
   }
   header {
+    position: relative;
     flex-direction: row;
     align-items: center;
     margin: auto;
+  }
+  header .fa-arrow-left {
+    position: absolute;
+    left: 0;
   }
   section {
     width: 100%;
@@ -704,6 +710,7 @@ footer a {
   .restau .meal {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     vertical-align: middle;
     justify-content: space-between;
     width: 100%;
@@ -716,6 +723,9 @@ footer a {
     margin-left: 50%;
     margin-right: 50%;
     text-align: center;
+  }
+  .restau .serving {
+    width: 400px;
   }
   .restau .dish {
     white-space: nowrap;

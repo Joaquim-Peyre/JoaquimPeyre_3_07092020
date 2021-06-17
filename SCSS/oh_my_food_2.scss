@@ -678,10 +678,11 @@ footer
 		flex-direction: row;
 		align-items: center;
 		margin:auto;
-		.fa-arrow-left
+		a
 		{
 			position: absolute;
-			left: 0;
+			right: 700px;
+	
 		}
 	}
 	section 

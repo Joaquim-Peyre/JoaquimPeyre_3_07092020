@@ -686,8 +686,8 @@ footer a {
     margin: auto;
   }
   header a {
-    position: absolute;
-    right: 700px;
+    position: relative;
+    right: 300px;
   }
   section {
     width: 100%;

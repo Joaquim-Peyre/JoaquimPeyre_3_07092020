@@ -72,7 +72,16 @@ body .fas.fa-heart {
 body .heart:hover .fas.fa-heart {
   display: inline;
   cursor: pointer;
-  opacity: 1;
+}
+
+@keyframes fadein {
+  /* sur Safari et Chrome */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 body .fa-heart {
@@ -95,18 +104,13 @@ header {
   position: relative;
 }
 
-header figure {
-  margin-inline-end: 80px;
-}
-
 header .fa-arrow-left {
   position: absolute;
-  top: 5em;
   color: black;
   align-self: center;
-  top: 10px;
+  top: 0.5em;
   font-weight: bold;
-  left: 25px;
+  left: 120px;
 }
 
 header h1 {
@@ -115,6 +119,16 @@ header h1 {
   text-align: center;
   justify-content: space-between;
   margin-right: 5px;
+  padding-top: 0;
+}
+
+header h2 {
+  z-index: 1;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  justify-content: space-between;
+  margin-right: 5px;
+  padding-top: 0;
 }
 
 section {
@@ -137,6 +151,7 @@ section .presentation h3 {
   font-weight: bolder;
   padding-top: 0.5em;
   text-align: center;
+  width: auto;
 }
 
 section .presentation h4 {
@@ -260,6 +275,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin: 1em 0 0 1em;
+  width: auto;
 }
 
 .restaurants h3 .heart {
@@ -398,6 +414,16 @@ h2 {
   z-index: 1;
 }
 
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .restau h1 {
   font-family: 'Shrikhand', cursive;
   display: flex;
@@ -425,29 +451,9 @@ h2 {
   /* Safari et Chrome */
 }
 
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .restau .two {
   -webkit-animation: fadein 1s;
   /* Safari et Chrome */
-}
-
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .restau .three {
@@ -455,29 +461,9 @@ h2 {
   /* Safari et Chrome */
 }
 
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .restau .four {
   -webkit-animation: fadein 2s;
   /* Safari et Chrome */
-}
-
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .restau .five {
@@ -485,29 +471,9 @@ h2 {
   /* Safari et Chrome */
 }
 
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .restau .six {
   -webkit-animation: fadein 3s;
   /* Safari et Chrome */
-}
-
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .restau .seven {
@@ -515,29 +481,9 @@ h2 {
   /* Safari et Chrome */
 }
 
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .restau .eight {
   -webkit-animation: fadein 4s;
   /* Safari et Chrome */
-}
-
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .restau .nine {
@@ -545,32 +491,12 @@ h2 {
   /* Safari et Chrome */
 }
 
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .restau .ten {
   -webkit-animation: fadein 5s;
   /* Safari et Chrome */
 }
 
-@-webkit-keyframes fadein {
-  /* sur Safari et Chrome */
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.restau article {
+article {
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -581,14 +507,14 @@ h2 {
   box-shadow: 0px 1px 1px black;
 }
 
-.restau .dish {
+.dish {
   white-space: nowrap;
   max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.restau h3 {
+h3 {
   font-weight: bolder;
   text-align: left;
   text-overflow: ellipsis;
@@ -596,7 +522,7 @@ h2 {
   width: 250px;
 }
 
-.restau p {
+p {
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -605,12 +531,14 @@ h2 {
   width: 250px;
 }
 
-.restau .price {
+.price {
   position: relative;
   right: 1px;
   font-weight: bold;
   align-self: center;
   text-align: right;
+  margin-left: auto;
+  margin-right: 1em;
 }
 
 article .check {
@@ -636,12 +564,6 @@ article:hover > .check {
 article:hover > .check .fa-check-circle {
   transform: rotate(360deg);
   transition: transform .5s;
-}
-
-.price {
-  margin-left: auto;
-  margin-right: 1em;
-  font-weight: bold;
 }
 
 .check {
@@ -703,6 +625,7 @@ footer h2 {
 
 footer .icon_footer {
   color: white;
+  padding-bottom: 10px;
 }
 
 footer .icon_footer .fas .fa-utensils {
@@ -728,6 +651,14 @@ footer a {
     flex-direction: row;
     align-items: center;
     margin: auto;
+  }
+  header .fa-arrow-left {
+    position: absolute;
+    color: black;
+    align-self: center;
+    top: 2em;
+    font-weight: bold;
+    left: 120px;
   }
   header a {
     position: relative;

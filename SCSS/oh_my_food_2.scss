@@ -33,6 +33,7 @@ body
 		background:linear-gradient(to bottom right, #ebade2, #bd8bda);
 		
 	}
+	//debut du spinner.
 	.loader
 	{
 		z-index: 99;
@@ -50,7 +51,8 @@ body
 			0% {transform: rotate(0deg); }
 			100% { transform: rotate(360deg); opacity: 0;z-index: 0;}
 		}
-	
+	//fin du spinner.
+
 		.fas.fa-heart
 		{
 			display: none;
@@ -76,7 +78,16 @@ body
 		{
 			display:inline;
 			cursor: pointer;
-			opacity: 1;
+			@keyframes fadein { /* sur Safari et Chrome */
+			0%
+			  {
+			  opacity:0;
+			  }
+			100%
+			  {
+			  opacity:1;
+			  }
+			}
 	    }
 	    .fa-heart
 		{
@@ -92,36 +103,42 @@ body
 		  	opacity: 0;
 	    }
 }
+//entete page.
 	header
 	{
 		background-color: white;
 		padding-left: 2em;
 		margin: 0;
 		position: relative;
-		figure 
-		{
-			margin-inline-end: 80px;
-		}
 		.fa-arrow-left 
 		{
 			position: absolute;
-			top:5em;
 			color: black;
 			align-self: center;
-			top: 10px;
+			top: 0.5em;
 			font-weight: bold;
-			left: 25px;
+			left: 120px;
 		}
-   
 		h1 
+		{
+			z-index: 1;
+			font-family: 'Shrikhand', cursive;
+			text-align: center;
+			justify-content: space-between;
+			margin-right: 5px;
+			padding-top: 0; 
+		}
+		h2 
     	{
 			z-index: 1;
 			font-family: 'Shrikhand', cursive;
 			text-align: center;
 			justify-content: space-between;
 			margin-right: 5px;
+			padding-top: 0;
     	}		
 	}
+	//corp de la page.
 	section 
 	{
     	background-color: whitesmoke;
@@ -142,6 +159,7 @@ body
 				font-weight: bolder;
 				padding-top: 0.5em;
 				text-align: center;
+				width: auto;
 			}
 			h4 
 			{
@@ -159,6 +177,7 @@ body
 				width: 100%;
         	}	
 	}
+	//
 	.fonction 
     {
 		z-index: 10;
@@ -270,6 +289,7 @@ h2
 	display: flex;
 	justify-content: space-between;
 	margin: 1em 0 0 1em;
+	width: auto;
 	.heart
 	{
 		margin-right: 1em;
@@ -415,7 +435,17 @@ h2
 		width: 100%;
 		z-index: 1;
 	}
-	
+	.serving
+	{
+		@-webkit-keyframes fadein { /* sur Safari et Chrome */
+			from{
+					opacity:0;
+				}
+				to {
+					opacity:1;
+				}
+			}
+	}
 }
 h1 
 {
@@ -446,122 +476,51 @@ hr
 }
 .one{
 	-webkit-animation: fadein 500ms; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-	from{
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
 	}
 .two
 	{
 	-webkit-animation: fadein 1s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}
 .three
 	{
 	-webkit-animation: fadein 1.5s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}
 .four
 	{
 	-webkit-animation: fadein 2s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}	
 .five
 	{
 	-webkit-animation: fadein 2.5s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}	
 .six
 	{
 	-webkit-animation: fadein 3s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}	
 .seven
 	{
 	-webkit-animation: fadein 3.5s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}	
 .eight
 	{
 	-webkit-animation: fadein 4s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}	
 .nine
 	{
 	-webkit-animation: fadein 4.5s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
-	}
+	
 	}	
 .ten 
 	{
 	-webkit-animation: fadein 5s; /* Safari et Chrome */
-	@-webkit-keyframes fadein { /* sur Safari et Chrome */
-		from {
-			opacity:0;
-		}
-		to {
-			opacity:1;
-		}
+	
 	}
 }	
 article
@@ -607,7 +566,8 @@ p
 	font-weight: bold;
 	align-self:center;
 	text-align: right;
-}
+	margin-left: auto; 
+	margin-right: 1em;
 }
 article .check
 {
@@ -634,12 +594,6 @@ article:hover > .check
 		transform: rotate(360deg);
 		transition:transform .5s ;
 	}
-}
-.price
-{
-	margin-left: auto; 
-	margin-right: 1em;
-	font-weight: bold;
 }
 .check
 {
@@ -701,6 +655,7 @@ footer
 	.icon_footer
 	{
 		color: white;
+		padding-bottom: 10px;
 		.fas .fa-utensils
 		{
 			color: white;
@@ -731,6 +686,15 @@ footer
 		flex-direction: row;
 		align-items: center;
 		margin:auto;
+		.fa-arrow-left 
+		{
+			position: absolute;
+			color: black;
+			align-self: center;
+			top: 2em;
+			font-weight: bold;
+			left: 120px;
+		}
 		a
 		{
 			position: relative;

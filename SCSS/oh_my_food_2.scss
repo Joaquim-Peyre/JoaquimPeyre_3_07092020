@@ -15,7 +15,6 @@ body
 	{
 		z-index: 10;
 		border-style:none;
-		
 		font-weight: bold;
 		color: white;
 		margin: auto;
@@ -30,9 +29,10 @@ body
 	}
 	button:hover
 	{
-		background:linear-gradient(to bottom right, #ebade2, #bd8bda);
-		
+		background:linear-gradient(to bottom right, #ebade2, #bd8bda);	
 	}
+
+
 	//debut du spinner.
 	.loader
 	{
@@ -52,6 +52,8 @@ body
 			100% { transform: rotate(360deg); opacity: 0;z-index: 0;}
 		}
 	//fin du spinner.
+
+
 
 		.fas.fa-heart
 		{
@@ -103,81 +105,90 @@ body
 		  	opacity: 0;
 	    }
 }
+
+
 //entete page.
-	header
+
+header
+{
+	background-color: white;
+	padding-left: 2em;
+	margin: 0;
+	position: relative;
+	.fa-arrow-left 
 	{
-		background-color: white;
-		padding-left: 2em;
-		margin: 0;
-		position: relative;
-		.fa-arrow-left 
-		{
-			position: absolute;
-			color: black;
-			align-self: center;
-			top: 0.5em;
-			font-weight: bold;
-			left: 120px;
-		}
-		h1 
-		{
-			z-index: 1;
-			font-family: 'Shrikhand', cursive;
-			text-align: center;
-			justify-content: space-between;
-			margin-right: 5px;
-			padding-top: 0; 
-		}
-		h2 
-    	{
-			z-index: 1;
-			font-family: 'Shrikhand', cursive;
-			text-align: center;
-			justify-content: space-between;
-			margin-right: 5px;
-			padding-top: 0;
-    	}		
+		position: absolute;
+		color: black;
+		align-self: center;
+		top: 0.5em;
+		font-weight: bold;
+		left: 120px;
 	}
-	//corp de la page.
-	section 
+	h1 
 	{
-    	background-color: whitesmoke;
-		h2 
+		z-index: 1;
+		font-family: 'Shrikhand', cursive;
+		text-align: center;
+		justify-content: space-between;
+		margin-right: 5px;
+		padding-top: 0; 
+	}
+	h2 
+	{
+		z-index: 1;
+		font-family: 'Shrikhand', cursive;
+		text-align: center;
+		justify-content: space-between;
+		margin-right: 5px;
+		padding-top: 0;
+	}		
+}
+
+
+	//corp de la page.
+
+section 
+{
+	background-color: whitesmoke;
+	h2 
+	{
+		font-weight: bolder;
+	}
+	.presentation
+	{
+		flex-direction: column;
+		text-align: center;
+		display: flex;
+		
+		padding-bottom: 3em;
+		justify-content: center;
+		h3 
 		{
 			font-weight: bolder;
-		}
-    	.presentation
-    	{
-			flex-direction: column;
+			padding-top: 0.5em;
 			text-align: center;
-			display: flex;
-			
-			padding-bottom: 3em;
-			justify-content: center;
-			h3 
-			{
-				font-weight: bolder;
-				padding-top: 0.5em;
-				text-align: center;
-				width: auto;
-			}
-			h4 
-			{
-				font-weight: normal;
-				text-align: center;
-			}
-        	h5 
-        	{
-				background-color: $grayish;
-				height: 2em;
-				align-self: center;
-				text-align: center;
-				padding-top: 1em;
-				box-shadow: 0px 0px 3px black;
-				width: 100%;
-        	}	
-	}
-	//
+			width: auto;
+		}
+		h4 
+		{
+			font-weight: normal;
+			text-align: center;
+		}
+		h5 
+		{
+			background-color: $grayish;
+			height: 2em;
+			align-self: center;
+			text-align: center;
+			padding-top: 1em;
+			box-shadow: 0px 0px 3px black;
+			width: 100%;
+		}	
+}
+
+
+	//choix preliminaire.
+
 	.fonction 
     {
 		z-index: 10;
@@ -199,7 +210,6 @@ body
 			flex-direction: row;
 			cursor: pointer;
 		    position: relative;
-			
 			font-weight: bold;
 			list-style: none;
 			width: auto;
@@ -272,30 +282,24 @@ h2
 {
 	font-weight: bolder;
 	position: relative;
-	
 	justify-content: space-around;
 	line-height: 1em;
 	background-color: whitesmoke;
 	padding: 1em;
 	text-align: center;
 	width: auto;
-	
-	
-
 	h3 
 	{
-		text-align: left;
-		font-weight: bold;
+	text-align: left;
+	font-weight: bold;	
 	display: flex;
 	justify-content: space-between;
 	margin: 1em 0 0 1em;
 	width: auto;
-	.heart
-	{
-		margin-right: 1em;
-		
-	}
-		
+		.heart
+		{
+			margin-right: 1em;
+		}	
 	}
 	h4 
 	{
@@ -312,9 +316,7 @@ h2
 	text-align: right;
 	margin-right: 2em;
 	vertical-align:top;
-	
 	}
-
 	h6 
 	{
 		font-weight: normal;
@@ -409,11 +411,12 @@ h2
 			padding-bottom: 0.25em;
 		}
 	}
+}
 
-	
-	
 
-}	
+
+//menu de chaque restaurant
+
 .restau 
 {
 	background-color: $whitish;
@@ -456,13 +459,10 @@ h1
 	.heart
 	{
 		margin-right: 1em;
-		
 	}
-	
 }
 h2 
 {
-	
 	margin-bottom: 3px;
 	text-align: left;
 }
@@ -471,8 +471,6 @@ hr
 	margin-left: 1.5em;
 	width: 50px;
 	border: 3px solid $tertiaire;
-		
-	
 }
 .one{
 	-webkit-animation: fadein 500ms; /* Safari et Chrome */
@@ -480,52 +478,42 @@ hr
 .two
 	{
 	-webkit-animation: fadein 1s; /* Safari et Chrome */
-	
 	}
 .three
 	{
 	-webkit-animation: fadein 1.5s; /* Safari et Chrome */
-	
 	}
 .four
 	{
-	-webkit-animation: fadein 2s; /* Safari et Chrome */
-	
+	-webkit-animation: fadein 2s; /* Safari et Chrome */	
 	}	
 .five
 	{
-	-webkit-animation: fadein 2.5s; /* Safari et Chrome */
-	
+	-webkit-animation: fadein 2.5s; /* Safari et Chrome */	
 	}	
 .six
 	{
-	-webkit-animation: fadein 3s; /* Safari et Chrome */
-	
+	-webkit-animation: fadein 3s; /* Safari et Chrome */	
 	}	
 .seven
 	{
-	-webkit-animation: fadein 3.5s; /* Safari et Chrome */
-	
+	-webkit-animation: fadein 3.5s; /* Safari et Chrome */	
 	}	
 .eight
 	{
-	-webkit-animation: fadein 4s; /* Safari et Chrome */
-	
+	-webkit-animation: fadein 4s; /* Safari et Chrome */	
 	}	
 .nine
 	{
-	-webkit-animation: fadein 4.5s; /* Safari et Chrome */
-	
+	-webkit-animation: fadein 4.5s; /* Safari et Chrome */	
 	}	
 .ten 
 	{
-	-webkit-animation: fadein 5s; /* Safari et Chrome */
-	
+	-webkit-animation: fadein 5s; /* Safari et Chrome */	
 	}
 }	
 article
-{
-	
+{	
 	background-color: white;
 	display:flex;
 	justify-content:space-between;
@@ -581,8 +569,7 @@ article .check
 	transition: width .5s;
 	font-size:30px;
 	color: white;
-	cursor: pointer;
-	
+	cursor: pointer;	
 }
 article:hover > .check
 {
@@ -629,7 +616,11 @@ span
 		background-color:$whitish;
 		border-radius: 50px 50px 0 0;
 		padding: 10px;
-	}		
+	}
+
+	
+//pied de page.	
+
 footer
 {
 	position: relative;
@@ -668,9 +659,13 @@ footer
 	}
 }
 
+
+//respopnsive ecran ordi
+
 @media screen and (min-width: 1024px)
 {
-    
+    //corp responsive.
+
 	body 
 		{ 
 	flex-direction: column;
@@ -680,6 +675,8 @@ footer
 	  height: 100%;
 	  width: 100%;
 		}
+
+	//entête.
 	header
 	{
 		position: relative;
@@ -701,6 +698,10 @@ footer
 			right: 300px;
 		}
 	}
+
+
+//corp responsive.
+
 	section 
 	{
 		width: 100%;
@@ -709,6 +710,8 @@ footer
 		{
 			display: block;
 		}
+
+
 	.restaurants
 	    {
 		display: flex;
@@ -717,6 +720,8 @@ footer
 		vertical-align: middle;
 		justify-content: space-between;
 	    }
+
+
 	.restau 
     	{
         background-color: $whitish;
@@ -766,6 +771,9 @@ footer
 			}
 		}
     }
+
+
+	//pied de page.
 	footer
 	{
     text-align: center;
